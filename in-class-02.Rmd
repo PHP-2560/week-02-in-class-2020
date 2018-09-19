@@ -90,16 +90,38 @@ The `dplyr` package uses verbs to perform data manipulation.
 ### Filtering Rows
 
 1. Filter all flights on your birthday.
+
+```{r}
+#Filtering all flights on March 10
+filter(flights, month == 3 & day == 10)
+```
+
 2. Filter all flights in rows 567 - 589
+
+```{r}
+#Filtering all flights in rows 567-589
+filter(flights[567:589, ])
+```
 
 
 ### Arranging Rows
 3. Use arrange() to order the data by year, month and day
+
+```{r}
+#Arrange by year, month, and day
+arrange(flights, year, month, day)
+```
+
 4. Use desc() to arrange flights by arrival delay.
+
+```{r}
+#Arrange by descending arrival delay
+arrange(flights, desc(arr_delay))
+```
 
 
 ### Select
-5. Select columns containing data information.
+5. Select columns containing date information.
 6. Select columns including only plane information.
 7. Rename tailnum to tail_num
 
