@@ -122,12 +122,30 @@ arrange(flights, desc(arr_delay))
 
 ### Select
 5. Select columns containing date information.
+
+```{r}
+select(flights, year, month, day)
+```
+
 6. Select columns including only plane information.
+
 7. Rename tailnum to tail_num
+
+```{r}
+library(plyr)
+rename(flights, c("tailnum" = "tail_num"))
+```
+
 
 
 ### Mutating Rows
 8. Create a variable called gain which describes the difference between arrival delap and departure delay.
+
+```{r}
+#gain describes difference between arrival delay and departure delay
+mutate(flights, gain = arr_delay - dep_delay)
+```
+
 9. Create a variable called speed which is distance over time in hours.
 
 
