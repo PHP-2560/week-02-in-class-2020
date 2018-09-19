@@ -50,7 +50,7 @@ rain.df$daily <- rowSums(rain.df[4:27])
 hist(rain.df$daily)
 ```
 
-*There are negative values in our dataset, which doesn't make sense since we are measuring daily rainful. These negative values are gives us negative sum values, which is creating a problem in our dataset and our histogram. 
+* There are negative values in our dataset, which doesn't make sense since we are measuring daily rainful. These negative values are gives us negative sum values, which is creating a problem in our dataset and our histogram. 
 
 8. Create a new data frame rain.df.fixed that takes the original and fixes it for the apparent flaw you have discovered. Having done this, produce a new histogram with the corrected data and explain why this is more reasonable.
 ```{r}
@@ -61,7 +61,7 @@ rain.df.fixed <-
 hist(rain.df.fixed$daily)
 ```
 
-*This histogram is more reasonable because now all the daily rainfall values are positive. 
+* This histogram is more reasonable because now all the daily rainfall values are positive. 
 
 ## Part 2
 ### New York City Flights 13
