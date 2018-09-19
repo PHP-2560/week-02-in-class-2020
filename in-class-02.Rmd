@@ -55,9 +55,7 @@ hist(rain.df$daily)
 8. Create a new data frame rain.df.fixed that takes the original and fixes it for the apparent flaw you have discovered. Having done this, produce a new histogram with the corrected data and explain why this is more reasonable.
 ```{r}
 library(dplyr)
-rain.df.fixed <- 
-  rain.df %>% 
-  filter(daily >= 0)
+rain.df.fixed <- mutate_all(rain.df, funs(replace(., .< 0, NA)))
 hist(rain.df.fixed$daily)
 ```
 
